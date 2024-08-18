@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "PhishBuster",
+  "version": "1.0",
+  "description": "A browser extension to detect phishing, by Aidan Butler.",
+  "icons": {
+    "128": "assets/icon2.png"
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "js/content.js"],
+        "run_at": "document_start"  
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "<all_urls>",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "assets/icon2.png"
+  }
+}

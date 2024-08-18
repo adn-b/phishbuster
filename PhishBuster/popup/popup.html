@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extension Popup</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <h1>PhishBuster</h1>
+    <h3>Note: Please refresh the page for the most accurate results.</h3>
+    <p>Status: <strong>Active</strong></p>
+    <hr>
+    <div id="result-wrapper">
+        <div id="siteResultDiv">
+            <h1>Site Result:</h1>
+            <div id="siteResult">Trusted</div>
+        </div>
+        <div id="targetSiteResultDiv">
+            <h1>Target Brand:</h1>
+            <div id="targetSite">None Found</div>
+        </div>
+    </div>
+    <hr>
+    <h1>Advanced Results:</h1>
+    <div class="TargetSite">
+        <p>Target Brand:</p>
+        <div id="targetBrandResult">Checking...</div><button id="send-prompt-target">?</button>
+    </div>
+    <!-- <div class="HomographDetector">
+        <p>Homograph Detected:</p>
+        <div id="homographDetectionResult">Checking...</div>
+    </div> -->
+    <div class="SSLCheck">
+        <p>SSL Check:</p>
+        <div id="sslResult">Checking...</div><button id="send-prompt-ssl">?</button>
+    </div>
+    <div class="BlacklistCheck">
+        <p>Blacklist Check:</p>
+        <div id="blacklistResult">Checking...</div><button id="send-prompt-blacklist">?</button>
+    </div>
+    <div class="iFrameDetection">
+        <p>iFrame Check:</p>
+        <div id="featureDetectionResult">Checking...</div><button id="send-prompt-iframe">?</button>
+    </div>
+    <div class="FormDetection">
+        <p>Form Check:</p>
+        <div id="formDetectionResult">Checking...</div><button id="send-prompt-form">?</button>
+    </div>
+    <div id="response-wrapper">
+        <p id="chatgpt-header">Get More Info:</p>
+        <div id="response-box">
+            <span id="chatgpt-span">ChatGPT:</span><p id="response" color="white"></p>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
